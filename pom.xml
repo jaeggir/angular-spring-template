@@ -5,7 +5,7 @@
 
     <groupId>ch.uhttraktor</groupId>
     <artifactId>website</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>${project.artifactId}</name>
     <inceptionYear>2015</inceptionYear>
@@ -15,9 +15,9 @@
     <packaging>pom</packaging>
 
     <scm>
-        <connection>scm:git:git@github.com:jaeggir/uht-traktor.ch.git</connection>
-        <developerConnection>scm:git:git@github.com:jaeggir/uht-traktor.ch.git</developerConnection>
-        <url>git@github.com:jaeggir/uht-traktor.ch</url>
+        <connection>scm:git:git@github.com:jaeggir/angular-spring-template</connection>
+        <developerConnection>scm:git:git@github.com:jaeggir/angular-spring-template</developerConnection>
+        <url>git@github.com:jaeggir/angular-spring-template</url>
     </scm>
 
     <licenses>
@@ -355,7 +355,6 @@
         </dependencies>
 
     </dependencyManagement>
-
 
     <build>
         <plugins>

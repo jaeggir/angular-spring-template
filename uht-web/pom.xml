@@ -6,7 +6,7 @@
     <parent>
         <artifactId>website</artifactId>
         <groupId>ch.uhttraktor</groupId>
-        <version>0.0.3-SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>uht-web</artifactId>
