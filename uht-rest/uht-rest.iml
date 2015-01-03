@@ -4,10 +4,10 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/ch/uhttraktor/website/rest/servlet/config/ApplicationConfiguration.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/ch/uhttraktor/website/rest/servlet/config/DatabaseConfiguration.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/ch/uhttraktor/website/rest/servlet/config/MvcConfiguration.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/ch/uhttraktor/website/rest/servlet/config/SecurityConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/ch/uhttraktor/website/rest/servlet/config/root/ApplicationConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/ch/uhttraktor/website/rest/servlet/config/root/DatabaseConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/ch/uhttraktor/website/rest/servlet/config/root/SecurityConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/ch/uhttraktor/website/rest/servlet/config/mvc/MvcConfiguration.java</file>
         </fileset>
       </configuration>
     </facet>
