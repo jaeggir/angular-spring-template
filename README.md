@@ -5,6 +5,7 @@ This is my project template. It is based on the following technologies:
  * AngularJS 1.3.x
  * Bootstrap 3.x
  * jQuery 2.x
+ * Java 1.8
  * Spring 4
  * Hibernate 4
  * npm/grunt/bower
@@ -12,6 +13,7 @@ This is my project template. It is based on the following technologies:
 ## Browser Support
 
 Internet Explorer: 9+
+
 All other browsers: (Current - 1) or Current 
 
 If you need support for older browsers, replace AngularJS 1.3.x with 1.2.x and jQuery 2.x with 1.x.
