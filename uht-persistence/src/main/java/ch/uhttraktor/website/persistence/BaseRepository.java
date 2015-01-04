@@ -159,4 +159,28 @@ public class BaseRepository<Entity extends BaseEntity> {
         }
     }
 
+    // FLUSH & CLEAR
+
+    /**
+     * Synchronize the persistence context to the
+     * underlying database. This is usually called when 
+     * a transaction ends. You may call it before clear to
+     * make sure everything is flushed to the database.
+     */
+    @Transactional(propagation = Propagation.MANDATORY)
+    public void flush() {
+        em.flush();
+    }
+
+    /**
+     * Clear the persistence context, causing all managed
+     * entities to become detached. Changes made to entities that
+     * have not been flushed to the database will not be
+     * persisted.
+     */
+    @Transactional(propagation = Propagation.MANDATORY)
+    public void clear() {
+        em.clear();
+    }
+
 }
