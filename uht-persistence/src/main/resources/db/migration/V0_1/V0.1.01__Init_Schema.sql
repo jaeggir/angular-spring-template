@@ -25,6 +25,16 @@ COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 SET search_path = public, pg_catalog;
 
+--
+-- Name: update_last_modified_column(); Type: FUNCTION; Schema: public; Owner: uht
+--
+
+CREATE FUNCTION update_last_modified_column() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$ BEGIN NEW.lastModified := current_timestamp; RETURN NEW; END; $$;
+
+ALTER FUNCTION public.update_last_modified_column() OWNER TO uht;
+
 SET default_tablespace = '';
 
 SET default_with_oids = false;
@@ -91,8 +101,22 @@ ALTER TABLE ONLY t_news
 -- Name: t_user_pkey; Type: CONSTRAINT; Schema: public; Owner: uht; Tablespace: 
 --
 
+
 ALTER TABLE ONLY t_user
     ADD CONSTRAINT t_user_pkey PRIMARY KEY (uuid);
+
+--
+-- Name: update_modtime; Type: TRIGGER; Schema: public; Owner: uht
+--
+
+CREATE TRIGGER update_modtime BEFORE INSERT OR UPDATE ON t_news FOR EACH ROW EXECUTE PROCEDURE update_last_modified_column();
+
+
+--
+-- Name: update_modtime; Type: TRIGGER; Schema: public; Owner: uht
+--
+
+CREATE TRIGGER update_modtime BEFORE INSERT OR UPDATE ON t_user FOR EACH ROW EXECUTE PROCEDURE update_last_modified_column();
 
 
 --

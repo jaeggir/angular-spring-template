@@ -1,0 +1,9 @@
+CREATE FUNCTION update_last_modified_column() RETURNS trigger
+LANGUAGE plpgsql
+AS $$ BEGIN NEW.lastModified := current_timestamp; RETURN NEW; END; $$;
+ALTER FUNCTION public.update_last_modified_column() OWNER TO uht;
+
+-- add trigger to tables
+CREATE TRIGGER update_modtime BEFORE INSERT OR UPDATE ON t_news FOR EACH ROW EXECUTE PROCEDURE update_last_modified_column();
+CREATE TRIGGER update_modtime BEFORE INSERT OR UPDATE ON t_user FOR EACH ROW EXECUTE PROCEDURE update_last_modified_column();
+
