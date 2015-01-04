@@ -82,13 +82,6 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
 
-        <!-- JSR-250: @PostConstruct, @RolesAllowed, @Resource etc. -->
-
-        <dependency>
-            <groupId>javax.annotation</groupId>
-            <artifactId>jsr250-api</artifactId>
-        </dependency>
-
         <!-- Lombok: @Getter, @Setter, ... -->
 
         <dependency>

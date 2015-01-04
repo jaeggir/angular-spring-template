@@ -45,7 +45,6 @@
         <javax-inject.version>1</javax-inject.version>
         <javax-servlet.version>3.1.0</javax-servlet.version>
         <javax-validation.version>1.1.0.Final</javax-validation.version>
-        <javax-annotation-jsr250.version>1.0</javax-annotation-jsr250.version>
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
 
         <jackson.version>2.5.0</jackson.version>
@@ -168,12 +167,6 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-orm</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context-support</artifactId>
                 <version>${spring.version}</version>
             </dependency>
 
@@ -334,14 +327,6 @@
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${javax-servlet.version}</version>
                 <scope>provided</scope>
-            </dependency>
-
-            <!-- JSR-250: @PostConstruct, @RolesAllowed, @Resource etc. -->
-
-            <dependency>
-                <groupId>javax.annotation</groupId>
-                <artifactId>jsr250-api</artifactId>
-                <version>${javax-annotation-jsr250.version}</version>
             </dependency>
 
             <!-- Lombok: @Getter, @Setter, ... -->
