@@ -26,6 +26,10 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+    
+    <prerequisites>
+        <maven>3.0.0</maven>
+    </prerequisites>
 
     <modules>
         <module>uht-domain</module>
@@ -345,7 +349,10 @@
         <plugins>
 
             <plugin>
-                <!-- use mvn -N versions:display-property-updates to check versions -->
+                <!-- How to detect if you're running the latest version of the configured dependencies:
+                     mvn -N versions:display-property-updates OR
+                     mvn -N versions:display-plugin-updates
+                -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>${versions-maven-plugin.version}</version>
